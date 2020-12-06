@@ -81,14 +81,15 @@ TARGET_GAPPS_ARCH := ${baseArch}
 \$(call inherit-product, device/phh/treble/base-pre.mk)
 include build/make/target/product/aosp_${baseArch}_ab.mk
 \$(call inherit-product, device/phh/treble/base.mk)
+\$(call inherit-product, vendor/VillaAdditions/villa.mk)
 $optional_base
 $apps_script
 $rom_script
 
 PRODUCT_NAME := $target
-PRODUCT_DEVICE := phhgsi_${arch}_$part
+PRODUCT_DEVICE := villa_${arch}_$part
 PRODUCT_BRAND := Android
-PRODUCT_MODEL := Phh-Treble $apps_name
+PRODUCT_MODEL := VillaROM
 
 PRODUCT_PACKAGES += $extra_packages
 
